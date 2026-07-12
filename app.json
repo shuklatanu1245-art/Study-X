@@ -4,13 +4,7 @@
     "slug": "study-x",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
     "userInterfaceStyle": "dark",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#0A1128"
-    },
     "assetBundlePatterns": [
       "**/*"
     ],
@@ -19,17 +13,13 @@
       "bundleIdentifier": "com.studyx.app"
     },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#0A1128"
-      },
       "package": "com.studyx.app"
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    },
+    "web": {},
     "plugins": [
-      "expo-dev-client"
+      "expo-dev-client",
+      "expo-asset",
+      "expo-font"
     ]
   },
   "react-native-google-mobile-ads": {

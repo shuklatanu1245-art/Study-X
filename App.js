@@ -7,7 +7,6 @@ import { StyleSheet, LogBox } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import mobileAds from 'react-native-google-mobile-ads';
 
 import { AuthProvider } from './src/contexts/AuthContext';
 import RootNavigator from './src/navigation/RootNavigator';
@@ -20,23 +19,7 @@ LogBox.ignoreLogs([
 
 export default function App() {
   useEffect(() => {
-    // Initialize the Google Mobile Ads SDK as early as possible.
-    // This returns a promise but we fire-and-forget since the app
-    // can render while ads initialize in the background.
-    mobileAds()
-      .initialize()
-      .then((adapterStatuses) => {
-        // Ad SDK initialized successfully.
-        // adapterStatuses contains the status of each ad network adapter.
-        if (__DEV__) {
-          console.log('Mobile Ads SDK initialized:', adapterStatuses);
-        }
-      })
-      .catch((error) => {
-        if (__DEV__) {
-          console.warn('Mobile Ads SDK init failed:', error);
-        }
-      });
+    // App initialized
   }, []);
 
   return (
