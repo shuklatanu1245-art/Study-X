@@ -20,7 +20,13 @@
       "expo-dev-client",
       "expo-asset",
       "expo-font"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "761e9361-1de8-4da5-9e0e-369183806fc7"
+      }
+    },
+    "owner": "devshukla"
   },
   "react-native-google-mobile-ads": {
     "android_app_id": "ca-app-pub-3940256099942544~3347511713",
